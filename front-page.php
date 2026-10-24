@@ -80,18 +80,18 @@ $hero_id = (int) noisy_opt( 'hero_image', 0 );
   <?php noisy_ticker( 'Les échos du digital', 'lg red', false, 8 ); ?>
   <div class="wrap section tight" id="blog">
     <h2 class="sr"><?php esc_html_e( 'Les échos du digital', 'noisy' ); ?></h2>
-    <div class="blog">
+    <div class="blog-grid">
       <?php
       $posts = new WP_Query( [ 'post_type' => 'post', 'posts_per_page' => 3, 'no_found_rows' => true, 'ignore_sticky_posts' => true ] );
       if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-      <a class="post" href="<?php the_permalink(); ?>">
+      <a class="post-card" href="<?php the_permalink(); ?>">
         <small><?php echo esc_html( get_the_date( 'F Y' ) ); ?></small>
         <h3><?php the_title(); ?></h3>
         <span class="read"><?php esc_html_e( 'Lire', 'noisy' ); ?></span>
       </a>
       <?php endwhile; wp_reset_postdata(); endif; ?>
     </div>
-    <div class="more"><a class="btn dark" href="<?php echo esc_url( home_url( '/les-echos-du-digital/' ) ); ?>"><?php esc_html_e( 'Tous les articles', 'noisy' ); ?></a></div>
+    <div class="more"><a class="btn ink" href="<?php echo esc_url( home_url( '/les-echos-du-digital/' ) ); ?>"><?php esc_html_e( 'Tous les articles', 'noisy' ); ?></a></div>
   </div>
 </section>
 <?php get_footer();

@@ -10,7 +10,7 @@ get_header(); ?>
     <?php if ( have_posts() ) : ?>
     <div class="post-list">
       <?php while ( have_posts() ) : the_post(); ?>
-      <a class="post" href="<?php the_permalink(); ?>">
+      <a class="post-card" href="<?php the_permalink(); ?>">
         <small><?php echo esc_html( get_the_date( 'j F Y' ) ); ?></small>
         <h3><?php the_title(); ?></h3>
         <p class="muted" style="font-size:14px"><?php echo esc_html( get_the_excerpt() ); ?></p>

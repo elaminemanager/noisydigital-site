@@ -3,7 +3,7 @@ Theme Name: Noisy
 Theme URI: https://noisydigital.com
 Author: NOISY DIGITAL
 Description: Thème sur mesure NOISY DIGITAL. Alternance de bandes noires et blanches, lignes défilantes rouges, typographie condensée.
-Version: 0.2.2
+Version: 0.2.3
 Requires at least: 6.4
 Requires PHP: 8.1
 Text Domain: noisy
@@ -42,8 +42,8 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 .btn.red:hover{background:var(--red-deep);border-color:var(--red-deep)}
 .btn.inverse{border-color:#fff;color:#fff;background:transparent}
 .btn.inverse:hover{background:#fff;color:var(--red)}
-.btn.dark{border-color:var(--fg-on-light);color:var(--fg-on-light)}
-.btn.dark:hover{background:var(--fg-on-light);color:#fff}
+.btn.ink{border-color:var(--fg-on-light);color:var(--fg-on-light);background:transparent}
+.btn.ink:hover{background:var(--fg-on-light);color:#fff}
 .btn.small{padding:10px 16px;font-size:13px}
 .cta{display:inline-flex;gap:12px;flex-wrap:wrap}
 .more{display:flex;justify-content:flex-end;margin-top:22px}
@@ -111,11 +111,11 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 .logowall li:hover img{opacity:1}
 
 /* Blog */
-.blog{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
-.post{border-top:2px solid var(--fg-on-light);padding-top:18px;text-decoration:none;display:block}
-.post small{color:var(--muted-on-light);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.post h3{font-family:var(--body);font-weight:600;font-size:18px;line-height:1.3;margin-top:8px;text-transform:none}
-.post .read{display:inline-block;margin-top:12px;font:600 13px/1 var(--body);color:var(--red)}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+.post-card{border-top:2px solid var(--fg-on-light);padding-top:18px;text-decoration:none;display:block}
+.post-card small{color:var(--muted-on-light);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.post-card h3{font-family:var(--body);font-weight:600;font-size:18px;line-height:1.3;margin-top:8px;text-transform:none}
+.post-card .read{display:inline-block;margin-top:12px;font:600 13px/1 var(--body);color:var(--red)}
 
 /* Bloc contact */
 .contact-band{background:var(--red);color:#fff}
@@ -179,7 +179,7 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
   .burger{display:flex;position:relative;z-index:16}
   .hero,.contact-band .wrap,.two-col{grid-template-columns:1fr}
   .hero figure{order:-1;aspect-ratio:4/3}
-  .services,.cases,.blog,.grid-list,.post-list{grid-template-columns:1fr}
+  .services,.cases,.blog-grid,.grid-list,.post-list{grid-template-columns:1fr}
   .logowall{grid-template-columns:repeat(3,1fr)}
   .foot-grid{grid-template-columns:1fr}
   .section{padding-block:52px}
