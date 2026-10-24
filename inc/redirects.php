@@ -16,7 +16,8 @@ add_action( 'init', function () {
 
     // 1. Préfixes de langue de l'ancien site : /fr_fr/ disparaît, /en/ rejoint la version française (site monolingue).
     $new = preg_replace( '#^/(fr_fr|en)(/|$)#', '/', $path, 1, $n );
-    if ( $n ) { noisy_go( $new, $query, 301 ); }
+    $stripped = (bool) $n;
+    if ( $stripped ) { $path = $new; }
 
     $p = rtrim( $path, '/' ) . '/';
     if ( $p === '//' ) { $p = '/'; }
@@ -55,6 +56,9 @@ add_action( 'init', function () {
         get_template_part( '410' );
         exit;
     }
+
+    // 4. Préfixe retiré sans autre correspondance : une seule redirection vers l'URL propre.
+    if ( $stripped ) { noisy_go( $p === '/' ? '/' : $path, $query, 301 ); }
 }, 1 );
 
 function noisy_go( $to, $query = null, $code = 301 ) {
