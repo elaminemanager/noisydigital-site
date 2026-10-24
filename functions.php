@@ -4,7 +4,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'NOISY_VERSION', '0.2.0' );
+define( 'NOISY_VERSION', '0.2.1' );
 
 /* ---------- Réglages de base ---------- */
 add_action( 'after_setup_theme', function () {

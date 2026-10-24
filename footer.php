@@ -5,8 +5,8 @@
     <div>
       <h2><?php echo esc_html( noisy_opt( 'contact_title' ) ); ?></h2>
       <p><?php echo esc_html( noisy_opt( 'contact_text' ) ); ?></p>
-      <div class="cta"><a class="btn light" href="<?php echo esc_url( home_url( '/contactez-nous/' ) ); ?>"><?php esc_html_e( 'Écrire à l\'agence', 'noisy' ); ?></a>
-      <?php if ( noisy_whatsapp_url() ) : ?><a class="btn light" href="<?php echo esc_url( noisy_whatsapp_url() ); ?>" target="_blank" rel="noopener">WhatsApp</a><?php endif; ?></div>
+      <div class="cta"><a class="btn inverse" href="<?php echo esc_url( home_url( '/contactez-nous/' ) ); ?>"><?php esc_html_e( 'Écrire à l\'agence', 'noisy' ); ?></a>
+      <?php if ( noisy_whatsapp_url() ) : ?><a class="btn inverse" href="<?php echo esc_url( noisy_whatsapp_url() ); ?>" target="_blank" rel="noopener">WhatsApp</a><?php endif; ?></div>
     </div>
     <address>
       <b>NOISY DIGITAL</b>

@@ -16,5 +16,8 @@
       </dl>
     </aside>
   </div>
+  <div class="wrap" style="padding-bottom:72px">
+    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.304215768446!2d-17.491414724890934!3d14.75188308575261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d52669202cb%3A0xc5e5491d32b608b2!2sNOISY%20DIGITAL!5e0!3m2!1sfr!2ssn!4v1792848013715!5m2!1sfr!2ssn" title="NOISY DIGITAL sur Google Maps" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  </div>
 </div>
 <?php get_footer();
