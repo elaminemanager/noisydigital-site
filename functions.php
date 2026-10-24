@@ -4,7 +4,8 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'NOISY_VERSION', '0.2.1' );
+define( 'NOISY_VERSION', '0.2.2' );
+require_once get_template_directory() . '/inc/redirects.php';
 
 /* ---------- Réglages de base ---------- */
 add_action( 'after_setup_theme', function () {
