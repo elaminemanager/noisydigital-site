@@ -3,7 +3,7 @@ Theme Name: Noisy
 Theme URI: https://noisydigital.com
 Author: NOISY DIGITAL
 Description: Thème sur mesure NOISY DIGITAL. Alternance de bandes noires et blanches, lignes défilantes rouges, typographie condensée.
-Version: 0.2.4
+Version: 0.2.5
 Requires at least: 6.4
 Requires PHP: 8.1
 Text Domain: noisy
@@ -171,6 +171,7 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 .wpcf7 .wpcf7-form p{margin:0 0 14px}
 .cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;margin-bottom:16px}
 .cf-grid label{display:grid;gap:6px;font:600 12px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-light)}
+.cf-grid>p{margin:0;display:contents}
 .cf-grid .full{grid-column:1/-1}
 .wpcf7 input:not([type=submit]):not([type=checkbox]),.wpcf7 textarea{font:400 16px/1.4 var(--body);padding:12px 14px;border:1px solid var(--line-on-light);background:#fff;color:var(--fg-on-light);width:100%;border-radius:0}
 .wpcf7 input:focus,.wpcf7 textarea:focus{outline:2px solid var(--red);outline-offset:0;border-color:var(--red)}
