@@ -4,7 +4,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'NOISY_VERSION', '0.2.9' );
+define( 'NOISY_VERSION', '0.3.0' );
 require_once get_template_directory() . '/inc/redirects.php';
 
 /* Régénère les règles de réécriture une fois par version du thème (robots.txt, archives des types de contenus). */
@@ -34,7 +34,7 @@ add_action( 'after_setup_theme', function () {
 
 /* ---------- Styles et scripts ---------- */
 add_action( 'wp_enqueue_scripts', function () {
-    wp_enqueue_style( 'noisy-fonts', 'https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600&display=swap', [], null );
+    wp_enqueue_style( 'noisy-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap', [], null );
     wp_enqueue_style( 'noisy', get_stylesheet_uri(), [ 'noisy-fonts' ], NOISY_VERSION );
     wp_enqueue_script( 'noisy', get_template_directory_uri() . '/assets/noisy.js', [], NOISY_VERSION, true );
 } );

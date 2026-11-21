@@ -3,7 +3,7 @@ Theme Name: Noisy
 Theme URI: https://noisydigital.com
 Author: NOISY DIGITAL
 Description: Thème sur mesure NOISY DIGITAL. Alternance de bandes noires et blanches, lignes défilantes rouges, typographie condensée.
-Version: 0.2.9
+Version: 0.3.0
 Requires at least: 6.4
 Requires PHP: 8.1
 Text Domain: noisy
@@ -14,7 +14,7 @@ Text Domain: noisy
   --black:#0b0b0c; --black-2:#141416; --white:#ffffff; --paper:#f7f5f1;
   --fg-on-dark:#f5f2ee; --muted-on-dark:#a8a39c; --line-on-dark:#262628;
   --fg-on-light:#121212; --muted-on-light:#5f5a53; --line-on-light:#e3dfd7;
-  --display:'Anton', Impact, 'Arial Narrow Bold', sans-serif; --body:'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+  --display:'Inter', 'Helvetica Neue', Arial, sans-serif; --body:'Inter', 'Helvetica Neue', Arial, sans-serif;
   --wrap:1180px;
 }
 *{box-sizing:border-box}
@@ -27,9 +27,9 @@ a{color:inherit}
 .skip{position:absolute;left:-999px;top:8px;background:var(--red);color:#fff;padding:10px 14px;z-index:100}
 .skip:focus{left:8px}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3,.h-display{font-family:var(--display);font-weight:400;letter-spacing:.005em;text-wrap:balance;margin:0}
-h2{font-size:clamp(34px,5vw,60px);line-height:.98;text-transform:uppercase}
-h3{font-size:28px;text-transform:uppercase;line-height:1.02}
+h1,h2,h3,.h-display{font-family:var(--display);font-weight:800;letter-spacing:-.03em;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4.2vw,52px);line-height:1;text-transform:uppercase}
+h3{font-size:24px;text-transform:uppercase;line-height:1.08}
 .eyebrow{font:600 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
 .muted{opacity:.7}
 .dark{background:var(--black);color:var(--fg-on-dark)}
@@ -49,13 +49,13 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 .more{display:flex;justify-content:flex-end;margin-top:22px}
 
 /* Lignes défilantes */
-.ticker{overflow:hidden;white-space:nowrap;padding-block:10px;font-family:var(--display);text-transform:uppercase;line-height:1;user-select:none}
+.ticker{overflow:hidden;white-space:nowrap;padding-block:10px;font-family:var(--display);font-weight:800;letter-spacing:-.03em;text-transform:uppercase;line-height:1;user-select:none}
 .ticker .track{display:inline-block;animation:slide 40s linear infinite}
 .ticker.reverse .track{animation-direction:reverse}
 .ticker span{display:inline-block;padding-inline:.45em}
 .ticker span::after{content:"·";padding-left:.9em;color:var(--red)}
-.ticker.xl{font-size:clamp(44px,7vw,92px)}
-.ticker.lg{font-size:clamp(30px,4.6vw,60px)}
+.ticker.xl{font-size:clamp(38px,5.8vw,76px)}
+.ticker.lg{font-size:clamp(26px,3.8vw,50px)}
 .ticker.red{color:var(--red)} .ticker.white{color:var(--white)} .ticker.black{color:var(--black)}
 .ticker.red span::after{color:currentColor}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -75,7 +75,7 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding-block:56px 64px}
-.hero h1{font-size:clamp(52px,9vw,124px);line-height:.92;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,6.6vw,92px);line-height:.96;text-transform:uppercase}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero .lead{max-width:46ch;font-size:17px;color:var(--muted-on-dark);margin:22px 0 28px}
 .hero figure{margin:0;position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden}
@@ -120,7 +120,7 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 /* Bloc contact */
 .contact-band{background:var(--red);color:#fff}
 .contact-band .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-block:64px}
-.contact-band h2{font-size:clamp(40px,6vw,76px)}
+.contact-band h2{font-size:clamp(34px,5vw,64px)}
 .contact-band p{font-size:16px;margin:16px 0 22px;max-width:40ch}
 .contact-band address{font-style:normal;font-size:15px;line-height:1.8}
 .contact-band address a{text-decoration:none}
@@ -139,10 +139,10 @@ h3{font-size:28px;text-transform:uppercase;line-height:1.02}
 
 /* Pages intérieures */
 .page-head{padding-block:48px 36px;border-bottom:1px solid var(--line-on-dark)}
-.page-head h1{font-size:clamp(44px,7vw,96px);line-height:.95;text-transform:uppercase}
+.page-head h1{font-size:clamp(36px,5.6vw,76px);line-height:.98;text-transform:uppercase}
 .page-head .lead{max-width:60ch;font-size:18px;color:var(--muted-on-dark);margin:18px 0 0}
 .prose{max-width:72ch;font-size:17px;line-height:1.65}
-.prose h2{font-size:clamp(28px,3.6vw,40px);margin:40px 0 14px}
+.prose h2{font-size:clamp(26px,3.2vw,36px);margin:40px 0 14px}
 .prose h3{font-size:22px;margin:28px 0 10px}
 .prose p{margin:0 0 1.1em}
 .prose ul,.prose ol{padding-left:1.2em}
