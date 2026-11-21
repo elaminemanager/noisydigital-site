@@ -4,8 +4,16 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'NOISY_VERSION', '0.2.8' );
+define( 'NOISY_VERSION', '0.2.9' );
 require_once get_template_directory() . '/inc/redirects.php';
+
+/* Régénère les règles de réécriture une fois par version du thème (robots.txt, archives des types de contenus). */
+add_action( 'init', function () {
+    if ( get_option( 'noisy_rewrite_version' ) !== NOISY_VERSION ) {
+        flush_rewrite_rules( false );
+        update_option( 'noisy_rewrite_version', NOISY_VERSION );
+    }
+}, 99 );
 
 /* ---------- Réglages de base ---------- */
 add_action( 'after_setup_theme', function () {
